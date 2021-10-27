@@ -9,7 +9,7 @@
   --green: #42b983;
   --red: #b94242;
   --gray: #666;
-  --darkgray: #444;
+  --darkgray: #111;
   --lightgray: #bbb;
 }
 
