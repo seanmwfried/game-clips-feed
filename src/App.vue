@@ -4,6 +4,7 @@
 
 <style>
 :root{
+  /* Color */
   --background-color: #222;
   --foreground-color: #eee;
   --green: #42b983;
@@ -11,6 +12,9 @@
   --gray: #666;
   --darkgray: #111;
   --lightgray: #bbb;
+  
+  /* Measurements */
+  --roundness: 10px;
 }
 
 body {
