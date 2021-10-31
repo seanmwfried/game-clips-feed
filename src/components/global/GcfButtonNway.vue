@@ -1,12 +1,8 @@
 <template>
   <div>
-    <label>
-      <input type="radio" value="off" :checked="modelValue === 'off'" @input="update">
-      <span class="off">Off</span>
-    </label>
-    <label>
-      <input type="radio" value="on" :checked="modelValue === 'on'" @input="update">
-      <span class="on">On</span>
+    <label v-for="(option, index) in options" :key="options +  index">
+      <input type="radio" :value="option" :checked="modelValue === option" @input="update">
+      <span>{{option}}</span>
     </label>
   </div>
 </template>
@@ -15,8 +11,11 @@
 export default {
   props: {
     'model-value': {
-      type: String,
-      default: 'any'
+      type: String
+    },
+    'options': {
+      type: Object,
+      required: true
     }
   },
   methods: {
@@ -48,26 +47,17 @@ export default {
     padding: 5px 10px;
   }
 
-  .off {
+  label:first-child span {
     border-top-left-radius: var(--roundness);
     border-bottom-left-radius: var(--roundness);
   }
 
-  .on {
+  label:last-child span {
     border-top-right-radius: var(--roundness);
     border-bottom-right-radius: var(--roundness);
   }
 
-  input:checked + span.off {
-    background-color: var(--red);
-  }
-
-  input:checked + span.any {
-    background-color: var(--lightgray);
-    color: var(--background-color);
-  }
-
-  input:checked + span.on {
+  input:checked + span {
     background-color: var(--green);
     color: var(--background-color);
   }

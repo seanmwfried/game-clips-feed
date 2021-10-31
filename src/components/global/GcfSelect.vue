@@ -1,12 +1,12 @@
 <template>
   <!-- Use optgroups if present -->
-  <select v-if="usesGroups">
+  <select v-if="usesGroups" :value="modelValue" @input="update">
     <optgroup v-for="group in options" :key="group.label" :label="group.label">
       <option v-for="option in group.options" :key="option" :value="option">{{option}}</option>
     </optgroup>
   </select>
   <!-- Else, just loop through and display options -->
-  <select v-else>
+  <select v-else :value="modelValue" @input="update">
     <option v-for="option in options" :key="option" :value="option">{{option}}</option>
   </select>
 </template>
@@ -34,7 +34,7 @@
  */
 export default {
   props: {
-    'value': {
+    'model-value': {
       type: String
     }, 
     'options': {
@@ -45,6 +45,12 @@ export default {
   computed: {
     usesGroups: function() {
       return typeof(this.options[0]) === 'object';
+    }
+  },
+
+  methods: {
+    update(event){
+      this.$emit('update:modelValue', event.target.value);
     }
   }
 }
