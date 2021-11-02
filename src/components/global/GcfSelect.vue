@@ -60,8 +60,6 @@ export default {
   select {
     padding: 5px;
     border-radius: var(--roundness);
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
     font-size: 1.1em;
     background-color: var(--gray);
     color: var(--foreground-color);

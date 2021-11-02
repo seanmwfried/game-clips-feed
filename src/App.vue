@@ -10,11 +10,16 @@
   --green: #42b983;
   --red: #b94242;
   --gray: #666;
-  --darkgray: #111;
+  --darkgray: #151515;
   --lightgray: #bbb;
   
   /* Measurements */
   --roundness: 10px;
+}
+
+html, body {
+  overflow: hidden;
+  margin: 0;
 }
 
 body {
@@ -25,7 +30,6 @@ body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: var(--foreground-color);
 }
 

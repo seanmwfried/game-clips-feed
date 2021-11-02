@@ -12,10 +12,6 @@
 </template>
 
 <script>
-import GcfButtonThreeway from "@/components/global/GcfButtonThreeway.vue";
-import GcfButtonTwoway from "@/components/global/GcfButtonTwoway.vue";
-import GcfButtonNway from "@/components/global/GcfButtonNway.vue";
-import GcfSelect from "@/components/global/GcfSelect.vue";
 
 export default {
   data: () => ({
@@ -35,14 +31,7 @@ export default {
     ]
   }),
 
-  name: "Home",
-
-  components: {
-    GcfButtonThreeway,
-    GcfButtonTwoway,
-    GcfButtonNway,
-    GcfSelect
-  }
+  name: "Home"
 };
 </script>
 
