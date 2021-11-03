@@ -1,6 +1,9 @@
 <template>
   <nav>
     <section>
+      <div class="hamburger-button">
+        <font-awesome-icon icon="bars"></font-awesome-icon>
+      </div>
       <div class="input-container hero-select">
         <label>Hero</label>
         <gcf-select v-model="selectedHero" :options="heroOptions"></gcf-select>
